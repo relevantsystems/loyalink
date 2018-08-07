@@ -1,5 +1,5 @@
  
-To run Rest.py
+To run rest.py
 
 install pip3 for python3/ pip for python2
 then install other packages using pip command
