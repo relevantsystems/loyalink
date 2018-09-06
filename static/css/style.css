@@ -1,0 +1,477 @@
+// Font-Size
+$base-font-size: 1em;
+
+// Line-Height
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
+// Breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+.container-fluid{
+    max-width: 160em;
+}
+
+body {
+
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+    @media #{$mq-medium} {
+    font-size: $base-font-size*1.2;
+    line-height: $base-line-height*1.2;
+    }
+
+    @media #{$mq-large} {
+    font-size: $base-font-size*1.3;
+    }
+
+    @media #{$mq-xlarge} {
+    font-size: $base-font-size*1.4;
+    }
+
+    @media #{$mq-xxlarge} {
+    font-size: $base-font-size*1.6;
+    }
+}
+
+
+
+p{
+    font-family: 'Lato';
+}
+
+h3,h1,h2,h4,h5,h6{
+    color:#997a00;
+    font-family:'Oswald'
+}
+.navbar{
+    background-color:transparent !important;
+    border-color: transparent;
+    font-family:'Oswald';
+}
+.navbar-brand img{
+    width:40%;
+    height:auto;
+    @media #{$mq-small} {
+        width:70%;
+    }
+    @media #{$mq-medium} {
+        width:70%;
+    }
+
+    @media #{$mq-large} {
+        width:40%;
+    }
+
+    @media #{$mq-xlarge} {
+        width:30%;
+    }
+
+    @media #{$mq-xxlarge} {
+        width:30%;
+    }
+
+
+}
+
+.nav-item a{
+        color:white;
+}
+
+.selected{
+    text-decoration: underline;
+}
+.nav-link:active{
+    text-decoration: underline;
+}
+.transparent{
+    bottom: 0;
+    background:rgba(0,0,0,0.2);
+    color:white;
+    width:100%;  
+}
+
+.btn-outline-warning{
+    border-color:  #c6b269;
+    color:  #c6b269;
+
+}
+
+btn-warning{
+    border-color:  #c6b269;
+    color:  #c6b269;
+}
+#homeheader{
+    width:100%;
+    height:50%;
+    background: url(../images/home.jpg);
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    }
+
+
+#artistsheader{
+    width:100%;
+    height:100%;
+    background: url(../images/artists.jpg);
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#staffheader{
+    width:100%;
+    height:100%;
+    background: url(../images/staff.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#faqheader{
+    width:100%;
+    height:100%;
+    background: url(../images/faq.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+#aboutusheader{
+    width:100%;
+    height:100%;
+    background: url(../images/about.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.modal{
+    width:100%;
+    height:100%;
+    border-radius:0px;
+}
+
+.modal-header{
+    border-bottom:0px;
+    text-align: center;
+}
+
+.modal-title{
+    background:url(../images/broken_noise.png);
+    margin:auto;
+    color:#c6b269;
+}
+
+.modal-content{
+    background:url(../images/broken_noise.png);
+    color:white;
+    border-radius:0px;
+}
+
+.form-control{
+    border-radius: 0px;
+    border:1px solid white;
+    background:url(../images/broken_noise.png);
+    color:white;
+}
+.form-control:focus{
+    background:url(../images/broken_noise.png);
+    color:white;
+    border:1px solid white;
+}
+
+.middle{
+    position: relative;
+    color:white;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.middle:before, .middle:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 0.5px;
+    content: '\a0';
+    background-color: white;
+}
+
+.middle:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+
+
+.section1{
+    text-align: center;
+    color: #c6b269;
+    font-family: 'PT Serif';
+    /*font-weight: 400;*/
+}
+
+
+.carousel2 .carousel-inner .carousel-item img{
+  padding:0px;
+}
+
+#gallery_carousel .carousel-inner .carousel-item.active,
+#gallery_carousel .carousel-inner .carousel-item-next,
+#gallery_carousel .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+#gallery_carousel .carousel-inner .carousel-item-right.active,
+#gallery_carousel .carousel-inner .carousel-item-next {
+  transform: translateX(16.67%);
+}
+
+ #gallery_carousel .carousel-inner .carousel-item-left.active, 
+ #gallery_carousel .carousel-inner .carousel-item-prev {
+  transform: translateX(-16.67%)
+}
+  
+ #gallery_carousel .carousel-inner .carousel-item-right,
+ #gallery_carousel .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 3px 3px;
+    border-radius: 15px;
+    border-color: #c6b269;
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    line-height: 1.42857;
+}
+
+.information{
+    background-image:url(../images/needle_img.png),url(../images/broken_noise.png);
+    background-size: auto 60%, auto auto;
+    background-position:left bottom,top left;
+    -webkit-filter: brightness(0.8),brightness(1);
+    -moz-filter: brightness(0.7),brightness(1);
+    -o-filter: brightness(0.8),brightness(1);
+    -ms-filter: brightness(0.8),brightness(1);
+    filter: brightness(0.8),brightness(1);
+    background-repeat: no-repeat,repeat;
+    
+}
+.information1{
+    background-image: url(../images/broken_noise.png);
+    background-position: left top;
+    background-repeat: repeat;
+}
+
+.storysection .tools{
+    background-image: url(../images/story.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+        
+}
+.story {
+    color:white;
+    
+}
+.story p{
+    font-family:'Lato';
+}
+
+.storysection {
+    background-image: url(../images/logo_transparent.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 20% 70%;
+}
+.storysection .bwlogobackground img{
+    width:80%;
+    height:80%;
+    float:right;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    .aboutus .brightness{
+        filter: brightness(0.767);
+    }
+}
+
+@-moz-document url-prefix() {
+    .aboutus .brightness{
+        filter: brightness(0.707);
+    }
+}
+
+
+.aboutus .brightness{
+    -webkit-filter: brightness(0.767);
+}
+/*.aboutus .brightness{
+    -webkit-filter: brightness(0.70);
+    filter: brightness(0.767);
+
+}*/
+
+.aboutus .mission_image{
+
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+.ourartists{
+    color:white;
+    background:url(../images/broken_noise.png) , url(../images/needle_img.png);
+    background-position: left top, left bottom;
+    background-repeat: repeat,no-repeat;
+    font-family:'Oswald';
+    /*background-size: 20% 80%;*/
+}
+
+.homeourartists{
+    color:white;
+    /*background-image: url(../images/needle_img.png);*/
+    background-size: 15% 150%;
+    background-position: left top;
+    background-repeat: no-repeat;
+    font-family:'Oswald' ;
+
+
+}
+
+.homeourartists .artistgallery{
+    margin:2px;
+    float:left;
+    width:180px;
+}
+
+.ourartists .artistgallery p{
+    font-family: 'Lato';
+}
+
+.artistgallery img{
+    width:100%;
+    height:auto;
+}
+
+.aboutus, .faq, .ourstaff{
+    color:white;
+    background:url(../images/broken_noise.png) repeat scroll left top;
+}
+
+.homeourstaff{
+    color:white;
+}
+
+.carousel3 {
+    background-image:  url(../images/testimonial.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+/*.carousel3 .carousel-inner{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}*/
+.carousel3 .carousel-inner .carousel-item p{
+    margin-left: 150px;
+    margin-right: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: white;
+    font-family:'Lato';
+}
+
+.carousel3 .carousel-indicators li{
+    width: 7px;
+    height: 7px;
+    color:red;
+    border-radius: 100%;
+    border: 1px solid #c6b269;
+    background-color: transparent;
+}
+
+.carousel3 .carousel-indicators .active{
+    background-color: #c6b269;
+}
+
+#footer{
+    background: #252525;
+    
+}
+
+#footer .image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 20%;
+    padding: 10px 10px;
+}
+
+.accordion {
+    background:url(../images/broken_noise.png);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: 0.4s;
+}
+
+.faq .active, .accordion:hover {
+    background:url(../images/broken_noise.png);
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #c6b269;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.faq .active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background:url(../images/broken_noise.png);
+    color:#bcbcbc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.faqline{
+    border-bottom: 1px solid #6f6f6f;
+}

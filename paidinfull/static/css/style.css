@@ -1,0 +1,129 @@
+h1,h2,h3,h4,h5,h6,a{
+    font-family: Oswald;
+}
+.navbar{
+    background: transparent !important;
+    color: black;
+}
+.navbar a{
+    color: black;
+}
+.center{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:60%;
+}
+.homeheader img{
+
+}
+.homeheader{
+    background:linear-gradient(180deg,#C0B283 75%,white 25% );
+    
+}
+
+.block1{
+    background:linear-gradient(270deg ,white 70%, #5B2A98 30%);
+}
+
+
+.vertical-center{
+    display:block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 50%;
+}
+.center .col-5{
+    background: white;
+}
+
+.bankingbenefitsrewards{
+    background-image: url(../images/breather-7170\ -\ copia.png);
+    background-size: cover;
+    padding: 6% 6%;
+    color: white;
+    
+}
+
+.bankingbenefitsrewards .right-align{
+    margin-left:60%;
+}
+
+
+.aboutheader{
+    color: white;
+    background:linear-gradient(180deg  ,#C0B283 75%,white 25% );
+    
+    width: 80%;
+    height: 40%;
+}
+
+.ourmissionheader{
+    background:linear-gradient(180deg, #5B2A98 75%,white 25%);
+    color: white;
+}
+
+.productsheader{
+    background-image:url(../images/stil-336189-unsplash.png);
+    background-size:cover;
+    background-repeat: no-repeat; 
+    padding:8% 8%;
+    color: white;
+}
+.products h2{
+    color: #5B2A98;
+}
+.products h6{
+    color:rgb(132, 242, 248);
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+.form-section{
+    padding-left: 10%;
+    padding-right: 10%
+  
+    
+}
+.subscribe-section{
+    background-color: #5B2A98;
+    color: white;
+    padding: 50px 30px;
+}
+.button-purple{
+    background-color: #5B2A98;
+    color: white;
+    font-family: Oswald;
+    font-size: 10px;
+    border-width: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.button-purple2{
+    background-color:white;
+    color: #5B2A98;
+    font-family: Oswald;
+    font-size: 10px;
+    border-width: 1px;
+    border-color: #5B2A98;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.button-gold{
+    background-color: #C0B283;
+    color: white;
+    font-family: Oswald;
+    font-size: 10px;
+    border-width: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

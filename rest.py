@@ -1,21 +1,35 @@
 import os
 from flask import Flask, abort, request, jsonify, g, url_for,render_template
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 from flask_httpauth import HTTPBasicAuth
 # from auth import *
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
 from passlib.apps import custom_app_context as pwd_context
 
+from flask_restful import Api, Resource
+from webargs import fields, validate
+from webargs.flaskparser import use_args, use_kwargs, parser, abort
+from datetime import date
+
 # initialization
 app = Flask(__name__)
+api = Api(app)
 app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy dog'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 # extensions
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
+# engine = create_engine('sqlite:///db.sqlite')
+# Session=sessionmaker()
+# Session.configure(bind=engine)
+#
+# session = Session()
 
 
 class User(db.Model):
@@ -62,9 +76,14 @@ class Appointment(db.Model):
     artist_id = db.Column(db.Integer, index= True)
     booking_time = db.Column(db.String)
 
+# class Calendar(db.Model):
+#     __tablename__ = 'calendar';
+#     year = db.Column(db.Integer)
+#     month = db.Column(db.Integer)
+#     day = db.Column(db.Integer)
+
+
 # webpage routes
-
-
 @app.route('/')
 def home():
     return render_template('/index.html')
@@ -89,6 +108,8 @@ def faq():
 def staff():
     return render_template('/staff.html')
 
+
+####################################################################################
 
 # api end points
 # end point for new user i.e register
@@ -162,7 +183,8 @@ def get_auth_token():
     return jsonify({'token' : token.decode('ascii')})
 
 
-@app.route('/api/bookappointment', methods=['POST'])
+#end point for calendar booking
+@app.route('/api/bookappointment/', methods=['POST'])
 @auth.login_required
 def new_appointment():
     customer_id = request.json.get('customer_id')
@@ -178,9 +200,94 @@ def new_appointment():
     return (jsonify({'username': g.user.username}), 201,
             {'Location': url_for('get_user', id=g.user.id, _external=True)})
 
+# when pressed next month on calendar  # AJAX request
+@app.route('/api/getappointment/<int:artist_id>')
+#@auth.login_required
+def new_date(artist_id):
+    #try:
+        args = request.args
+        print(args)  # For debugging
+        #booking_date = request.json.get('date')  # date in iso format
+        booking_date = '3/21/2018 10:00'
+        # month = request.json.get('month)')
+        #artist_id =  request.json.get('artist_id')
+        # booking_date = date(year=year,)
+        # exists = Appointment.query.(db.exists().where(year==year and month==month and artist))
+    #http://www.leeladharan.com/sqlalchemy-query-with-or-and-like-common-filters
+        lAppointments = db.session.query(Appointment).filter(Appointment.booking_time.like('3/21/2018 10%'))
+
+        for appointment in lAppointments:
+            print (appointment.booking_time)
+
+        available_appointments = []
+        if exists == False:
+            month_end = days_in_month(month,year)
+            for i in range(1,month_end):
+                available_appointments.append(8);
+        return jsonify(available_appointments)
+    #except Exception as e:
+    #    print(e)
+
+
+# A function to determine if a year is a leap year.
+# Do not change this function.
+def is_leap_year(year):
+    return (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0)
+
+# You should complete the definition of this function:
+
+def days_in_month(month, year):
+
+    if month in ['September', 'April', 'June', 'November']:
+        return 30
+
+    elif month in ['January', 'March', 'May', 'July', 'August','October','December']:
+        return 31
+
+    elif month == 'February' and is_leap_year(year) == True:
+        return 29
+
+    elif month == 'February' and is_leap_year(year) == False:
+        return 28
+    else:
+        return None
+
+
+# class GetAppointmentsResource(Resource):
+#
+#     dateadd_args = {
+#         "artist_id": fields.Int(required=True, validate=validate.Range(min=1)),
+#         "date": fields.Str(
+#             missing="days", validate=validate.OneOf(["minutes", "days"])
+#         ),
+#     }
+#
+#     @use_args(dateadd_args)
+#     def get(self, args):
+#         return {"message": "Welcome, {}!".format(args["name"])}
+#     @use_kwargs(dateadd_args)
+#     # def post(self, value, addend, unit):
+#     #     """A date adder endpoint."""
+#     #     value = value or dt.datetime.utcnow()
+#     #     if unit == "minutes":
+#     #         delta = dt.timedelta(minutes=addend)
+#     #     else:
+#     #         delta = dt.timedelta(days=addend)
+#     #     result = value + delta
+#     #     return {"result": result.isoformat()}
+#
+#
+# # This error handler is necessary for usage with Flask-RESTful
+# @parser.error_handler
+# def handle_request_parsing_error(err, req):
+#     """webargs error handler that uses Flask-RESTful's abort function to return
+#     a JSON error response to the client.
+#     """
+#     abort(422, errors=err.messages)
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
         db.create_all()
 
+    # api.add_resource(GetAppointmentsResource, "/api/getappointment")
     app.run(debug=True)

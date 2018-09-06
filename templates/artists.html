@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Loyalink</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+<header id="artistsheader" >
+    <div class = container>
+        <nav class="navbar navbar-expand-sm bg-light" >
+                <a class="navbar-brand" href="#">
+                    <img src="../static/images/logo.png" alt="">
+                </a>
+
+                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item selected">
+                            <a class="nav-link active" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/artists">ARTISTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus">ABOUTUS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/staff">STAFF</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/faq">FAQ</a>
+                        </li>
+
+                    </ul>
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#loginmodal">LOGIN</button>
+                    <button class="btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#registermodal">REGISTER</button>
+
+
+
+                    <!-- Login Modal -->
+                    <div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="loginmodalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="LoginModalLongTitle">LOGIN</h5>
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button> -->
+                          </div>
+                          <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="psw" placeholder="Password">
+                                </div>
+                                <div class="checkbox">
+                                  <label><input type="checkbox" value="" checked>Remember me</label>
+                                </div>
+                                  <button type="submit" class="btn btn-warning btn-block"><span class="glyphicon glyphicon-off"></span> LOGIN</button>
+                              </form>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Modal Register-->
+                    <div class="modal fade" id="registermodal" tabindex="-1" role="dialog" aria-labelledby="registermodalTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="RegisterModalLongTitle">REGISTER</h5>
+                            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button> -->
+                          </div>
+                          <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="usrname" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="dob" placeholder="Date of Birth">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="psw" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="psw" placeholder="confirm Password">
+                                </div>
+                                <div class="checkbox">
+                                  <label><input type="checkbox" value="" checked>Remember me</label>
+                                </div>
+                                  <button type="submit" class="btn btn-warning btn-block"><span class="glyphicon glyphicon-off"></span>REGISTER </button>
+                              </form>
+                          </div>
+                          <div >
+                            <pre class="middle"><small>  Or connect with  </small></pre>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+                </div>
+            </nav>
+
+            <br>
+            <br>
+            <br>
+            <section style="color: white; text-align: center;">
+                <h2>ARTISTS</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </section>
+    </div>
+</header>
+
+<section class="ourartists">
+    <br>
+    <div class="container" >
+            <h3 style="text-align: center">OUR ARTISTS</h3>
+            <br>
+            <br>
+            <h4 style="text-align: center"> Some line about loyal ink artists</h4>
+             <div class="row">
+
+
+                    <div class="artistgallery col-sm">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <a target="_blank" href="../static/images/artists_images/lilly.jpg">
+                            <img src="../static/images/artists_images/lilly.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Lilly</div>
+                        <p><small>Some line about artist</small></p>
+
+                    </div>
+                    <div class="artistgallery col-sm">
+                        <br>
+                        <br>
+                        <a target="_blank" href="../static/images/artists_images/phor.jpg">
+                            <img src="../static/images/artists_images/phor.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Phor</div>
+                        <p><small>Some line about artist</small></p>
+                    </div>
+                    <div class="artistgallery col-sm">
+
+
+                        <a target="_blank" href="../static/images/artists_images/van.jpg">
+                            <img src="../static/images/artists_images/van.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Van</div>
+                        <p><small>Some line about artist</small></p>
+                    </div>
+                    
+
+                <!-- <div class="col-2"></div> -->
+                
+            </div>
+            <div class="row">
+
+
+                    <div class="artistgallery col-sm">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        <a target="_blank" href="../static/images/artists_images/lilly.jpg">
+                            <img src="../static/images/artists_images/lilly.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Lilly</div>
+                        <p><small>Some line about artist</small></p>
+
+                    </div>
+                    <div class="artistgallery col-sm">
+                        <br>
+                        <br>
+                        <a target="_blank" href="../static/images/artists_images/phor.jpg">
+                            <img src="../static/images/artists_images/phor.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Phor</div>
+                        <p><small>Some line about artist</small></p>
+                    </div>
+                    <div class="artistgallery col-sm">
+                       
+                        
+                        <a target="_blank" href="../static/images/artists_images/van.jpg">
+                            <img src="../static/images/artists_images/van.jpg" alt="" width="80%" height="80%">
+                        </a>
+                        <div class="desc">Van</div>
+                        <p><small>Some line about artist</small></p>
+                    </div>   
+                    
+
+                
+            </div>           
+
+      
+        <br>
+    </div>
+    <br>
+</section>
+
+<footer id="footer" >
+    <img src="../static/images/logo.png" class="image">
+</footer>
+
+
+</body>
+</html>

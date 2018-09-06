@@ -1,0 +1,222 @@
+body {
+    font-family: 'Oswald', sans-serif !important;
+}
+
+h3{
+    color:#997a00;
+}
+.navbar{
+    background-color:transparent !important;
+    border-color: transparent; 
+}
+.navbar-brand img{
+    width:20%;
+    height:20%;
+}
+
+.nav-item a{
+        color:white;
+}
+
+.selected{
+    text-decoration: underline;
+}
+.nav-link:active{
+    text-decoration: underline;
+}
+.transparent{
+   
+    bottom: 0;
+    background:rgba(0,0,0,0.2);
+    color:white;
+    width:100%;
+    
+}
+#homeheader{
+    width:100%;
+    height:600px;
+    background: url(../images/home.jpg);
+    background-size:100% 100%;
+    
+}
+
+
+#artistsheader{
+    width:100%;
+    height:550px;
+    background: url(../images/artists.jpg);
+    background-size:100% 100%;
+}
+
+#staffheader{
+    width:100%;
+    height:400px;
+    background: url(../images/staff.jpg);
+    background-size:100% 100%;
+}
+
+#faqheader{
+    width:100%;
+    height:550px;
+    background: url(../images/faq.jpg);
+    background-size:100% 100%;
+}
+
+#aboutusheader{
+    width:100%;
+    height:550px;
+    background: url(../images/about.jpg);
+    background-size:100% 100%;
+}
+.modal{
+    width:100%;
+    height:100%;
+    border-radius:0px;
+}
+
+.modal-header{
+    border-bottom:0px;
+    text-align: center;
+}
+
+.modal-title{
+    margin:auto;
+    color:#b38f00;
+}
+
+.modal-content{
+    background-color: #4d4d4d;
+    color:white;
+    border-radius:0px;
+}
+
+.form-control{
+    border-radius: 0px;
+    border:1px solid white;
+    background-color: #4d4d4d;
+    color:white;
+}
+.form-control:focus{
+    background-color:#4d4d4d;
+    color:white;
+    border:1px solid white;
+}
+
+.middle{
+    position: relative;
+    color:white;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    font-family:serif;
+}
+
+.middle:before, .middle:after {
+    position: absolute;
+    top: 51%;
+    overflow: hidden;
+    width: 50%;
+    height: 0.5px;
+    content: '\a0';
+    background-color: white;
+}
+
+.middle:before {
+    margin-left: -50%;
+    text-align: right;
+}
+
+.tattooing_image{
+    margin:0;
+    padding:0px 0px;
+    height:20%;
+    width:20%;
+}
+
+.section1{
+    text-align: center;
+    color: #b38f00 
+}
+
+
+.carousel .carousel-inner .carousel-item img{
+  padding:0px;
+  
+}
+
+
+#gallery_carousel .carousel-inner .carousel-item.active,
+#gallery_carousel .carousel-inner .carousel-item-next,
+#gallery_carousel .carousel-inner .carousel-item-prev {
+  display: flex;
+}
+#gallery_carousel .carousel-inner .carousel-item-right.active,
+#gallery_carousel .carousel-inner .carousel-item-next {
+  transform: translateX(16.67%);
+}
+
+ #gallery_carousel .carousel-inner .carousel-item-left.active, 
+ #gallery_carousel .carousel-inner .carousel-item-prev {
+  transform: translateX(-16.67%)
+}
+  
+ #gallery_carousel .carousel-inner .carousel-item-right,
+ #gallery_carousel .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 3px 3px;
+    border-radius: 15px;
+    border-color: #b38f00;
+    background-color: transparent;
+    color:white;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.42857;
+}
+
+.story {
+    color:white;
+}
+
+.bwlogobackground img{
+    width:50%;
+    height:40%;
+    float:right;
+}
+
+.ourartists{
+    color:white;
+    
+}
+
+.artistgallery{
+    margin:2px;
+    float:left;
+    width:180px;
+}
+
+.artistgallery img{
+    width:100%;
+    height:auto;
+}
+
+.ourstaff{
+    color:white;
+}
+
+#footer{
+    background: #252525;
+    
+}
+
+#footer .image{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 20%;
+    padding: 10px 10px;
+}
